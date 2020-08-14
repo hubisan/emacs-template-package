@@ -1,4 +1,5 @@
-* Get the current makem.sh from the web
+* makem.sh
+** Get the current makem.sh from the web
 
 #+BEGIN_SRC emacs-lisp :exports results :results raw :wrap src sh
   (let ((url "https://raw.githubusercontent.com/alphapapa/makem.sh/master/makem.sh"))
@@ -1123,8 +1124,11 @@ fi
 
 exit $errors
 #+end_src
+** Make it executable
+** Get the current makefile from the web
 
-* Get GPL3
+* license
+** Get GPL3
 
 #+BEGIN_SRC emacs-lisp :exports results :results raw :wrap src txt
   (let ((url "https://www.gnu.org/licenses/gpl-3.0.txt"))
@@ -1810,3 +1814,5 @@ the library.  If this is what you want to do, use the GNU Lesser General
 Public License instead of this License.  But first, please read
 <https://www.gnu.org/licenses/why-not-lgpl.html>.
 #+end_src
+
+* testing - github action

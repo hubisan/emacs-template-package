@@ -1,6 +1,7 @@
 * Package-name                                                     :noexport:
 
 [[https://www.gnu.org/licenses/gpl-3.0][https://img.shields.io/badge/License-GPL%20v3-blue.svg]]
+[[../../actions][../../workflows/.github/workflows/test.yml/badge.svg]]
 
 <Short description of what this package is doing.>
 
