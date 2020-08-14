@@ -27,7 +27,45 @@ Uses [[https://github.com/alphapapa/makem.sh][makem.sh]] for linting and running
 [[https://github.com/jorgenschaefer/emacs-buttercup][buttercup]]. After pushing a Github action is triggerd to automatically lint and
 run tests. The outcome can be seen on the [[https://github.com/{{{owner}}}/{{{repo}}}/actions][Actions]] page.
 
-*** Lint and run tests locally
+*** Lint & run tests
 
-To lint the package and run the tests locally you can use the following Makefile
-targets:
+To lint the package and run the tests locally from the command line you can use
+the Makefile targets or call makem.sh directly. To run Emacs with an empty
+configuration and not use your local emacs configuration it is best to use the
+sandbox mechanism provided by makem.sh.
+
+#+BEGIN_SRC shell :file lsp.sh
+  # Create the permanent sandbox. The directory is ignored in .gitignore.
+  # The sandbox directory can be deleted and build again if needed.
+  make sandbox=.sandbox install-deps=t install-linters=t
+
+  # Run all rules in the sandbox.
+  make sandbox=.sandbox all
+
+  # Run all lints.
+  make sandbox=.sandbox lint
+
+  # Run all tests.
+  make sandbox=.sandbox test
+
+  # Use makem.sh for linting
+
+  ./makem.sh --sandbox=.sandbox lint          # All
+  ./makem.sh --sandbox=.sandbox lint-checkdoc # Run checkdoc.
+  ./makem.sh --sandbox=.sandbox lint-compile  # Byte-compile source files with warnings as errors.
+  ./makem.sh --sandbox=.sandbox lint-declare  # Run check-declare.
+  ./makem.sh --sandbox=.sandbox lint-elsa     # Run Elsa (not included in "lint" rule).
+  ./makem.sh --sandbox=.sandbox lint-indent   # Lint indentation.
+  ./makem.sh --sandbox=.sandbox lint-package  # Run package-lint.
+  ./makem.sh --sandbox=.sandbox lint-regexps  # Run relint.
+
+  # Use makem.sh for running tests
+
+  ./makem.sh --sandbox=.sandbox test
+
+  # Use makem.sh to setup and load everything and then launch Emacs
+
+  ./makem.sh --sandbox=.sandbox batch
+#+END_SRC
+
+Check [[https://github.com/alphapapa/makem.sh][makem.sh]] for more.
