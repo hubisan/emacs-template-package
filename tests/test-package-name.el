@@ -13,7 +13,7 @@
 (require 'buttercup)
 (require 'ert)
 
-(require 'package-name)
+;; (require 'package-name)
 
 ;; * Helpers
 
