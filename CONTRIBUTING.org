@@ -11,7 +11,7 @@ Make sure to:
 
 ** Labels used for Issues
 
-Check the [[file:../../labels][labels]] page.
+Check the [[file:~/projects/labels][Labels]] page.
 
 * Pull Requests
 
