@@ -1,3 +1,12 @@
+* Variables
+
+| Variable | Meaning                              |
+|----------+--------------------------------------|
+| pkg-name | Name of the package like use-package |
+| owner    | github repo owner (user)             |
+| repo     | name of the repository               |
+| year     | the current year                     |
+
 * makem.sh
 ** Get the current makem.sh from the web
 

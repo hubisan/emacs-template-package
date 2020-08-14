@@ -41,6 +41,8 @@ sandbox mechanism provided by makem.sh.
 
   # Run all rules in the sandbox.
   make sandbox=.sandbox all
+  make sandbox=.sandbox v=v all  # To increase verbosity.
+  make sandbox=.sandbox v=vv all # To increase verbosity even more.
 
   # Run all lints.
   make sandbox=.sandbox lint
