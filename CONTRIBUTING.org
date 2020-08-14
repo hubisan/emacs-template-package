@@ -1,0 +1,28 @@
+* Contributing
+
+* Bugs, Improvements and new Features
+
+Use the [[file:../issues][issue tracker]] and make sure to:
+
+- Check that the issue has not already been reported.
+- Check that the issue is not part of a active pull request.
+
+** Labels used for Issues
+
+See [[file:../../labels][labels]]
+
+* Pull Requests
+
+Cool that you want to contribute your code :-)
+
+Remember to:
+
+- Run the [[#testing][tests]].
+- Update the README.org if needed.
+- Update the CHANGELOG.org if needed.
+
+** Testing
+
+Use makem.sh for linting and running the tests. The tests are written with the
+buttercup test suite.
+

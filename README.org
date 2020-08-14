@@ -1,0 +1,92 @@
+* Package-name                                                     :noexport:
+
+[[https://www.gnu.org/licenses/gpl-3.0][https://img.shields.io/badge/License-GPL%20v3-blue.svg]]
+
+<Short description of what this package is doing.>
+
+<Add a screenshot maybe>
+
+** Main features
+
+- <description of feature 1>
+- <description of Feature 2>
+- ..
+
+-----
+
+* Contents                                                        :TOC:QUOTE:
+#+BEGIN_QUOTE
+- [[#installation][Installation]]
+- [[#usage][Usage]]
+- [[#customization][Customization]]
+  - [[#variables][Variables]]
+  - [[#faces][Faces]]
+- [[#key-bindings][Key bindings]]
+  - [[#hydra][Hydra]]
+- [[#changelog][Changelog]]
+- [[#contributing][Contributing]]
+#+END_QUOTE
+
+* Installation
+
+Install the package from MELPA.
+
+With [[https://github.com/jwiegley/use-package][use-package]]:
+
+#+BEGIN_SRC emacs-lisp
+  (use-package hl-line-fringe-mode
+    :defer t
+    :hook (...)
+    :init
+    ;; Customization
+    (setq
+     ;; ...
+     ))
+#+END_SRC
+
+* Usage
+
+<describe how this package is used>
+
+* Customization
+
+** Variables
+
+Set the following variables to change the behaviour of the package:
+
+| Variable | Default | Description |
+|----------+---------+-------------|
+|          |         |             |
+
+** Faces
+
+The following faces are defined:
+
+| Face | Description |
+|------+-------------|
+|      |             |
+|      |             |
+
+* Key bindings
+
+<whatever needs to be said about that>
+
+| Key | Action | Description |
+|-----+--------+-------------|
+|     |        |             |
+
+** Hydra
+
+<if there is any hydra>
+
+* Changelog
+
+See the [[file:CHANGELOG.org][changelog]].
+
+* Contributing
+
+Use the issue tracker to reports bugs, suggest improvements or propose new
+features. If you want to contribute to the code base open a pull request.
+
+In any case please check out the [[file:CONTRIBUTING.org][contributing
+guidelines]].
