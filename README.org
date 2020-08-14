@@ -1,43 +1,40 @@
-* Package-name                                                     :noexport:
+* TODO Package-name                                              :noexport_2:
 
 [[https://www.gnu.org/licenses/gpl-3.0][https://img.shields.io/badge/License-GPL%20v3-blue.svg]]
-[[../../actions][../../workflows/CI/badge.svg]]
-add badge for melpa, see org roam
-mabye add badge for version, see org roam
 
-<Short description of what this package is doing.>
+<TODO description of what this package is doing.>
+<TODO Add a screenshot maybe.>
 
-<Add a screenshot maybe>
+** TODO Main features                                           :noexport_0:
 
-** Main features
-
-- <description of feature 1>
-- <description of Feature 2>
+- description of feature 1
+- description of Feature 2
 - ..
 
 -----
 
-* Contents                                                        :TOC:QUOTE:
+** Contents
+
 #+BEGIN_QUOTE
 - [[#installation][Installation]]
 - [[#usage][Usage]]
 - [[#customization][Customization]]
-  - [[#variables][Variables]]
-  - [[#faces][Faces]]
-- [[#key-bindings][Key bindings]]
-  - [[#hydra][Hydra]]
+- [[#key-bindings][Key Bindings]]
 - [[#changelog][Changelog]]
 - [[#contributing][Contributing]]
 #+END_QUOTE
 
-* Installation
+** TODO Installation
 
-Install the package from MELPA.
+<TODO remove unused ones and if only 1 promote the content and remove the heading>
 
-With [[https://github.com/jwiegley/use-package][use-package]]:
+*** TODO From Melpa
+
+Install the package from MELPA with for instance [[https://github.com/jwiegley/use-package][use-package]]:
 
 #+BEGIN_SRC emacs-lisp
-  (use-package hl-line-fringe-mode
+  (use-package package-name
+    :ensure t
     :defer t
     :hook (...)
     :init
@@ -47,13 +44,31 @@ With [[https://github.com/jwiegley/use-package][use-package]]:
      ))
 #+END_SRC
 
-* Usage
+*** TODO From Github
 
-<describe how this package is used>
+You can install the package from github with for instance [[https://github.com/jwiegley/use-package][use-package]], [[https://github.com/quelpa/quelpa][quelpa]]
+and [[https://github.com/quelpa/quelpa-use-package][quelpa-use-package]] as follows:
 
-* Customization
+#+BEGIN_SRC emacs-lisp
+  (use-package package-name
+    :ensure nil
+    :defer t
+    :quelpa (package-name :fetcher github :repo "...")
+    :hook (...)
+    :init
+    ;; Customization
+    (setq
+     ;; ...
+     ))
+#+END_SRC
 
-** Variables
+** TODO Usage
+
+<TODO describe how this package is used>
+
+** TODO Customization
+
+*** TODO Variables
 
 Set the following variables to change the behaviour of the package:
 
@@ -61,7 +76,7 @@ Set the following variables to change the behaviour of the package:
 |----------+---------+-------------|
 |          |         |             |
 
-** Faces
+*** TODO Faces
 
 The following faces are defined:
 
@@ -70,7 +85,7 @@ The following faces are defined:
 |      |             |
 |      |             |
 
-* Key bindings
+** TODO Key Bindings
 
 <whatever needs to be said about that>
 
@@ -78,18 +93,17 @@ The following faces are defined:
 |-----+--------+-------------|
 |     |        |             |
 
-** Hydra
+*** TODO Hydra
 
 <if there is any hydra>
 
-* Changelog
+** Changelog
 
 See the [[file:CHANGELOG.org][changelog]].
 
-* Contributing
+** Contributing
 
 Use the issue tracker to reports bugs, suggest improvements or propose new
-features. If you want to contribute to the code base open a pull request.
+features. If you want to contribute please open a pull request.
 
-In any case please check out the [[file:CONTRIBUTING.org][contributing
-guidelines]].
+In any case please check out the [[file:CONTRIBUTING.org][contributing guidelines]] beforehand.

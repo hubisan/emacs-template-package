@@ -2,16 +2,12 @@
 
 * Bugs, Improvements and new Features
 
-Go to [[file:../../issues][Issues]] and make a new issue.
+Go to [[https://github.com/{{{owner}}}/{{{repo}}}/issues][Issues]] and make a new issue.
 
 Make sure to:
 
 - Check that the issue has not already been reported.
 - Check that the issue is not part of an active pull request.
-
-** Labels used for Issues
-
-Check the [[file:~/projects/labels][Labels]] page.
 
 * Pull Requests
 
@@ -19,11 +15,19 @@ Cool that you want to contribute your code :-)
 
 Remember to:
 
-- Run the tests (see [[#testing][tests]]).
-- Update the README.org if needed.
-- Update the CHANGELOG.org if needed.
+- Include only one feature in a pull request.
+- Open an issue and mention your planned pull request.
+- The tests must pass (see [[#testing][testing]]).
+- Update [[README.org]] if needed.
+- Update [[CHANGELOG.org]].
 
 ** Testing
 
 Uses [[https://github.com/alphapapa/makem.sh][makem.sh]] for linting and running the tests. The tests are written with
-[[https://github.com/jorgenschaefer/emacs-buttercup][Buttercup]]. The
+[[https://github.com/jorgenschaefer/emacs-buttercup][buttercup]]. After pushing a Github action is triggerd to automatically lint and
+run tests. The outcome can be seen on the [[https://github.com/{{{owner}}}/{{{repo}}}/actions][Actions]] page.
+
+*** Lint and run tests locally
+
+To lint the package and run the tests locally you can use the following Makefile
+targets:
