@@ -55,6 +55,5 @@
 
 ;; * Footer
 
-(provide '{{{pkg-name}}})
-
-;;; {{{pkg-name}}}.el ends here
+(provide '{{{pgk-name}}})
+;;; {{{pgk-name}}}.el ends here
