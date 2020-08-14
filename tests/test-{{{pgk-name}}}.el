@@ -1,10 +1,9 @@
-;;; test-package-name.el --- Tests for package-name -*- lexical-binding:t -*-
+;;; test-{{{pgk-name}}}.el --- Tests for {{{pgk-name}}} -*- lexical-binding:t -*-
 
 ;; Package-Requires: ((buttercup))
 
 ;;; Commentary:
 
-;; <commentary>
 ;; If you wnat to split your tests into multiple files just use another file
 ;; named test-*.el, *-test.el or *-tests.el
 
@@ -15,7 +14,7 @@
 (require 'buttercup)
 (require 'ert)
 
-(require 'package-name)
+(require '{{{pgk-name}}})
 
 ;; * Helpers
 
@@ -57,6 +56,6 @@
 ;;       (it "a list with duplicates removed when arg unique is non-nil.")
 ;;       )))
 
-(provide 'test-package-name)
+(provide 'test-{{{pgk-name}}})
 
-;;; test-package-name.el ends here
+;;; test-{{{pgk-name}}}.el ends here

@@ -31,7 +31,7 @@
 Install the package from MELPA with for instance [[https://github.com/jwiegley/use-package][use-package]]:
 
 #+BEGIN_SRC emacs-lisp
-  (use-package package-name
+  (use-package {{{pgk-name}}}
     :ensure t
     :defer t
     :hook (...)
@@ -48,10 +48,10 @@ You can install the package from github with for instance [[https://github.com/j
 and [[https://github.com/quelpa/quelpa-use-package][quelpa-use-package]] as follows:
 
 #+BEGIN_SRC emacs-lisp
-  (use-package package-name
+  (use-package {{{pgk-name}}}
     :ensure nil
     :defer t
-    :quelpa (package-name :fetcher github :repo "...")
+    :quelpa ({{{pgk-name}}} :fetcher github :repo "...")
     :hook (...)
     :init
     ;; Customization
