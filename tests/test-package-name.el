@@ -1,5 +1,7 @@
 ;;; test-package-name.el --- Tests for package-name -*- lexical-binding:t -*-
 
+;; Package-Requires: ((buttercup))
+
 ;;; Commentary:
 
 ;; <commentary>
