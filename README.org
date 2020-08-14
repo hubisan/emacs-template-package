@@ -15,14 +15,12 @@
 
 ** Contents
 
-#+BEGIN_QUOTE
 - [[#installation][Installation]]
 - [[#usage][Usage]]
 - [[#customization][Customization]]
 - [[#key-bindings][Key Bindings]]
 - [[#changelog][Changelog]]
 - [[#contributing][Contributing]]
-#+END_QUOTE
 
 ** TODO Installation
 
