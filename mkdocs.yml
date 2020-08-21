@@ -7,11 +7,33 @@ repo_url: https://github.com/hubisan/emacs-template-package
 theme:
   name: material
   language: en
+
+  favicon: assets/images/favicon.png
+  logo: img/logo.svg
+
   palette:
     primary: deep purple
     accent: deep purple
+
   font:
     text: Roboto
     code: Roboto Mono
-  favicon: assets/images/favicon.png
-  logo: img/logo.svg
+
+  features:
+    # - instant
+    # - navigation.expand
+    # - tabs
+
+  nav:
+    - Home: index.md
+    - Installation: installation.md
+    - Usage: usage.md
+    - Key Bindings: key-bindings.md
+    - Contributing: contributing.md
+
+  plugins:
+    - search
+
+  markdown_extensions:
+    - toc:
+        permalink: true

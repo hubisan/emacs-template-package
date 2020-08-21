@@ -2,13 +2,13 @@
 
 [[https://www.gnu.org/licenses/gpl-3.0][https://img.shields.io/badge/License-GPL%20v3-blue.svg]]
 
-<TODO description of what this package is doing.>\\
-<TODO Add a screenshot maybe.>\\
-<TODO Update GitHub description.>\\
-<TODO If documentation > add link to documentation in GitHub description>\\
-<TODO If documentation > turn on gh
+<TODO description of what this package is doing.>@@html:<br>@@
+<TODO Add a screenshot maybe.>@@html:<br>@@
+<TODO Update GitHub description.>@@html:<br>@@
+<TODO If documentation > add link to documentation in GitHub description>@@html:<br>@@
+<TODO If documentation > turn on github pages (if needed)@@html:<br>@@
 <TODO Disable or enable features in GitHub Settings > Options (Wikis, Projects,
-...)
+...)@@html:<br>@@
 
 ** TODO Main features                                           :noexport_0:
 
