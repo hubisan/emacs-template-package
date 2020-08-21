@@ -5,6 +5,15 @@
 <TODO description of what this package is doing.>
 <TODO Add a screenshot maybe.>
 
+** TODO Setup mkdocs                                            :noexport_0:
+Make this a user option? If set to yes the files are added.
+
+Setup MkDocs on github:
+
+1. Go to settings on your github repository.
+2. Scroll down (in Options) to GitHub Pages.
+3.
+
 ** TODO Main features                                           :noexport_0:
 
 - description of feature 1
