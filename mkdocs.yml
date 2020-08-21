@@ -1,8 +1,11 @@
 site_name: emacs-template-package
 site_url: https://hubisan.github.io/emacs-template-package
+site_description: This is the description for the package.
+site_author: John Doe
 
-# repo_name: hubisan/emacs-template-package
 repo_url: https://github.com/hubisan/emacs-template-package
+remote_name: origin
+remote_branch: gh-pages
 
 theme:
   name: material
@@ -19,11 +22,6 @@ theme:
     text: Roboto
     code: Roboto Mono
 
-  features:
-    # - instant
-    # - navigation.expand
-    # - tabs
-
   nav:
     - Home: index.md
     - Installation: installation.md
@@ -31,9 +29,13 @@ theme:
     - Key Bindings: key-bindings.md
     - Contributing: contributing.md
 
+  features:
+    - instant
+
   plugins:
     - search
 
   markdown_extensions:
     - toc:
-        permalink: true
+        permalink: True
+    - smarty
