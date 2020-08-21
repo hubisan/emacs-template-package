@@ -19,14 +19,15 @@ Remember to:
 
 - Include only one feature in a pull request.
 - Open an issue and mention your planned pull request.
-- The tests must pass (see [[#testing][testing]]).
+- The tests must pass (see [[#testing][Testing]]).
 - Update [[README.org]] if needed.
+- Update the documentation if needed (see [[#Documentation][Documentation]])
 - Update [[CHANGELOG.org]].
 
 ** Testing
 
 Uses [[https://github.com/alphapapa/makem.sh][makem.sh]] for linting and running the tests. The tests are written with
-[[https://github.com/jorgenschaefer/emacs-buttercup][buttercup]]. After pushing a Github action is triggerd to automatically lint and
+[[https://github.com/jorgenschaefer/emacs-buttercup][buttercup]]. After pushing a GitHub action is triggerd to automatically lint and
 run tests. The outcome can be seen on the [[https://github.com/{{{owner}}}/{{{repo}}}/actions][Actions]] page.
 
 *** Lint & run tests
@@ -73,3 +74,11 @@ sandbox mechanism provided by makem.sh.
 #+END_SRC
 
 Check [[https://github.com/alphapapa/makem.sh][makem.sh]] for more.
+
+** Documentation
+
+The documentation is automatically build and pushed to the gh-pages branch with
+[[https://squidfunk.github.io/mkdocs-material/][mkdocs-material]] and a GitHub Action when the master branch is updated.
+
+To preview the documentation locally [[https://squidfunk.github.io/mkdocs-material/getting-started/#installation][install]] mkdocs-material locally and run
+~mkdocs build~. You can find the index.html in the ~site~ folder.

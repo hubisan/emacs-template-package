@@ -2,17 +2,13 @@
 
 [[https://www.gnu.org/licenses/gpl-3.0][https://img.shields.io/badge/License-GPL%20v3-blue.svg]]
 
-<TODO description of what this package is doing.>
-<TODO Add a screenshot maybe.>
-
-** TODO Setup mkdocs                                            :noexport_0:
-Make this a user option? If set to yes the files are added.
-
-Setup MkDocs on github:
-
-1. Go to settings on your github repository.
-2. Scroll down (in Options) to GitHub Pages.
-3.
+<TODO description of what this package is doing.>\\
+<TODO Add a screenshot maybe.>\\
+<TODO Update GitHub description.>\\
+<TODO If documentation > add link to documentation in GitHub description>\\
+<TODO If documentation > turn on gh
+<TODO Disable or enable features in GitHub Settings > Options (Wikis, Projects,
+...)
 
 ** TODO Main features                                           :noexport_0:
 
@@ -72,6 +68,8 @@ and [[https://github.com/quelpa/quelpa-use-package][quelpa-use-package]] as foll
 ** TODO Usage
 
 <TODO describe how this package is used>
+
+Check out the documentation at {{{docu-url}}}.
 
 ** TODO Customization
 
