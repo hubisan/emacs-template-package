@@ -1,6 +1,15 @@
 /* Using 4.85 contrast ratio */
 /* https://contrast-ratio.com/#%23c77dff-on-%232e303e */
 
+:root {
+  --my-heading-color: #997bff;
+  --my-a-color: var(--my-heading-color);
+  --my-a-underline-color: #3e3464;
+  --my-a-hover-color: #ff5bdf;
+  --my-a-hover-underline-color: #52304b;
+  --my-a-active-bgc: #52304b;
+}
+
 [data-md-color-scheme="slate"] {
 
   --md-hue: 272;
@@ -45,19 +54,49 @@
   /* Footer color shades */
   --md-footer-bg-color:                hsla(var(--md-hue), 15%, 12%, 0.87);
   --md-footer-bg-color--dark:          hsla(var(--md-hue), 15%, 10%, 1);
-}
-
-h2 {
-  font-variant: small-caps;
-  color: #997bff;
 
 }
 
-h3 {
-  color: #997bff;
+/* Headings */
+
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4
+{
+  color: var(--my-heading-color);
 }
 
-h4 {
+.md-typeset h2 {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.md-typeset h4 {
   font-style: italic;
-  color: #997bff;
+}
+
+/* Links */
+
+.md-typeset a {
+  color: var(--my-a-color);
+  text-decoration: underline;
+  text-decoration-color: var(--my-a-underline-color)
+}
+
+.md-typeset a:focus,
+.md-typeset a:hover,
+.md-typeset a:active,
+.md-typeset .headerlink:focus,
+.md-typeset .headerlink:hover,
+.md-typeset .headerlink:active
+{
+  color: var(--my-a-hover-color);
+  text-decoration-color: var(--my-a-hover-underline-color)
+}
+
+.md-typeset a:active,
+.md-typeset a:active
+{
+  border-radius: 2px;
+  background-color: var(--my-a-active-bgc);
 }
