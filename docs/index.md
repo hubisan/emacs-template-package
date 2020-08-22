@@ -6,15 +6,19 @@ TODO Short description.
 
 TODO Describe main features.
 
+## Extensions
 
+!!! warning "Remove section"
+    This section is only here to show the features you can use while writing the
+    documentation with the extensions.
 
-## Markdown extensions
+### Markdown extensions
 
 All available extensions are listed in the
 [sitemap](https://python-markdown.github.io/sitemap.html). This explains the
 enabled ones.
 
-### Admonition
+#### Admonition
 
 You can use the following classes including synonyms:
 - note, seealso
@@ -30,7 +34,7 @@ You can use the following classes including synonyms:
 !!! danger "Don't try this at home"
     ...
 
-### Attr_list (HTML Attributes)
+#### Attr_list (HTML Attributes)
 
 Add html attributes to elements:
 
@@ -42,7 +46,7 @@ This is a paragraph.
 This is a paragraph.
 {: #an_id .a_class }
 
-### Def_list (Definition Lists)
+#### Def_list (Definition Lists)
 
 ```markdown
 Apple
@@ -53,7 +57,7 @@ Apple
 :   Pomaceous fruit of plants of the genus Malus in
     the family Rosaceae.
 
-### Footnotes
+#### Footnotes
 
 ``` markdown
 Footnotes[^1] have a label[^@#$%] and the footnote's content.
@@ -67,7 +71,7 @@ Footnotes[^1] have a label[^@#$%] and the footnote's content.
 [^1]: This is a footnote content.
 [^@#$%]: A footnote on the label: "@#$%".
 
-### Meta
+#### Meta
 
 Overwrite the title with front matter at top:
 
