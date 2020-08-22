@@ -1,23 +1,9 @@
 /* Using 4.85 contrast ratio */
 /* https://contrast-ratio.com/#%23c77dff-on-%232e303e */
 
-h2 {
-  /* font-weight: normal !important; */
-  font-variant: small-caps;
-  color: #cba9ff;
-  color: #b273ff;
-}
-
-h3 {
-  /* font-weight: bold !important; */
-  font-style: italic;
-  color: #cba9ff;
-  color: #b273ff;
-}
-
 [data-md-color-scheme="slate"] {
 
-  --md-hue: 232;
+  --md-hue: 272;
 
   /* Default color shades */
   --md-default-fg-color:               hsla(var(--md-hue), 25%, 70%, 1);
@@ -59,4 +45,19 @@ h3 {
   /* Footer color shades */
   --md-footer-bg-color:                hsla(var(--md-hue), 15%, 12%, 0.87);
   --md-footer-bg-color--dark:          hsla(var(--md-hue), 15%, 10%, 1);
+}
+
+h2 {
+  font-variant: small-caps;
+  color: #997bff;
+
+}
+
+h3 {
+  color: #997bff;
+}
+
+h4 {
+  font-style: italic;
+  color: #997bff;
 }
