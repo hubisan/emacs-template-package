@@ -23,7 +23,7 @@
 
 # * Code:
 
-name: "CI"
+name: tests
 on:
   pull_request:
   push:

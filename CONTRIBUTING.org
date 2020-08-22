@@ -78,7 +78,19 @@ Check [[https://github.com/alphapapa/makem.sh][makem.sh]] for more.
 ** Documentation
 
 The documentation is automatically build and pushed to the gh-pages branch with
-[[https://squidfunk.github.io/mkdocs-material/][mkdocs-material]] and a GitHub Action when the master branch is updated.
+[[https://squidfunk.github.io/mkdocs-material/][mkdocs-material]] and a GitHub Action if the master branch is updated.
 
-To preview the documentation locally [[https://squidfunk.github.io/mkdocs-material/getting-started/#installation][install]] mkdocs-material locally and run
-~mkdocs build~. You can find the index.html in the ~site~ folder.
+To preview the documentation locally install the dependencies:
+
+#+BEGIN_SRC shell
+  pip3 install mkdocs-material
+  pip3 install mkdocs-minify-plugin
+  pip3 install mkdocs-git-revision-date-localized-plugin
+#+END_SRC
+
+Then run a local server with ~mkdocs serve~ at http://localhost:8000/. The
+documentation will be built and live reloading is started. Upon any changes the
+documentation is automatically rebuilt and the page is reloaded.
+
+The settings for the documentation can be found in [[mkdocs.yml]]. The files are
+stored in the [[docs]] folder.

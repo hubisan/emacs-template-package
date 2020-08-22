@@ -1,41 +1,95 @@
-site_name: emacs-template-package
-site_url: https://hubisan.github.io/emacs-template-package
-site_description: This is the description for the package.
+# Project information
+site_name: Package name
+site_url: https://hubisan.github.io/emacs-template-package/index.html
 site_author: John Doe
+site_description: >-
+    Multiline desription for this package. Quite nice and so on. Multiline
+    desription for this package.
 
-repo_url: https://github.com/hubisan/emacs-template-package
-remote_name: origin
-remote_branch: gh-pages
+# Repository
+repo_url: https://github.com/squidfunk/mkdocs-material
+edit_uri: ""
 
+# Copyright
+copyright: Copyright &copy; 20xx - 20xx John Doe
+
+# Configuration
 theme:
-  name: material
-  language: en
+    name: material
 
-  favicon: assets/images/favicon.png
-  logo: img/logo.svg
+    # 404 page
+    static_templates:
+        - 404.html
 
-  palette:
-    primary: deep purple
-    accent: deep purple
+    # Don't include MkDocs' JavaScript
+    include_search_page: false
+    search_index_only: true
 
-  font:
-    text: Roboto
-    code: Roboto Mono
+    # Default values, taken from mkdocs_theme.yml
+    language: en
+    # features:
+    #- tabs
+    #- instant
+    palette:
+        scheme: slate
+        primary: deep purple
+        accent: deep purple
+    font:
+        text: Roboto
+        code: Roboto Mono
+    favicon: assets/images/favicon.png
+    logo: img/logo.svg
 
-  nav:
-    - Home: index.md
+# Customization
+extra_css:
+    - css/extra.css
+extra_javascript:
+    - js/extra.js
+
+# Plugins
+plugins:
+    - search
+    - git-revision-date-localized
+    - minify:
+          minify_html: true
+
+# Extensions
+markdown_extensions:
+  - markdown.extensions.admonition
+  - markdown.extensions.attr_list
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc:
+      permalink: true
+  - markdown.extensions.smarty:
+          smart_angled_quotes: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: repo-user
+      repo: repo-name
+  - pymdownx.saneheaders
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+# Page tree
+nav:
+    - Overview: index.md
     - Installation: installation.md
     - Usage: usage.md
+    - Customization: customization.md
     - Key Bindings: key-bindings.md
+    - Changelog: changelog.md
     - Contributing: contributing.md
-
-  features:
-    - instant
-
-  plugins:
-    - search
-
-  markdown_extensions:
-    - toc:
-        permalink: True
-    - smarty
