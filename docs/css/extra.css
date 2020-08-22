@@ -64,11 +64,12 @@
 .md-typeset h4
 {
   color: var(--my-heading-color);
+  font-weight: 400;
 }
 
 .md-typeset h2 {
-  text-transform: uppercase;
-  font-weight: 400;
+  /* text-transform: uppercase; */
+  font-variant: all-small-caps;
 }
 
 .md-typeset h4 {
