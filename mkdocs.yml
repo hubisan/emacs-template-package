@@ -1,13 +1,13 @@
 # Project information
 site_name: Package name
-site_url: https://hubisan.github.io/emacs-template-package/index.html
+site_url: https://hubisan.github.io/emacs-template-package/
 site_author: John Doe
 site_description: >-
     Multiline desription for this package. Quite nice and so on. Multiline
     desription for this package.
 
 # Repository
-repo_url: https://github.com/squidfunk/mkdocs-material
+repo_url: https://github.com/hubisan/emacs-template-package
 edit_uri: ""
 
 # Copyright
