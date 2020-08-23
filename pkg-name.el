@@ -3,11 +3,12 @@
 ;; TODO Copyright (C) {{{year}}} Daniel Hubmann <hubisan@gmail.com>
 
 ;; TODO add author, maintaner and url.
-;; Author: Daniel Hubmann <hubisan@gmail.com>
-;; Maintainer: Daniel Hubmann <hubisan@gmail.com>
-;; URL: https://github.com/{{{owner}}}/{{{repo}}}
+;; TODO Author: Daniel Hubmann <hubisan@gmail.com>
+;; TODO Maintainer: Daniel Hubmann <hubisan@gmail.com>
+;; TODO URL: https://github.com/{{{owner}}}/{{{repo}}}
+;; URL: https://example.com
 ;; TODO add keywords, call function `finder-by-keyword' to get a list of allowed.
-;; Keywords:
+;; TODO Keywords: convenience
 ;; Version: 0.1.0
 ;; TODO add requires.
 ;; Package-Requires: ((emacs "27.1"))
