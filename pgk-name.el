@@ -1,4 +1,4 @@
-;;; {{{pkg-name}}}.el --- TODO description -*- lexical-binding: t -*-
+;;; pkg-name.el --- TODO description -*- lexical-binding: t -*-
 
 ;; TODO Copyright (C) {{{year}}} Daniel Hubmann <hubisan@gmail.com>
 
@@ -38,7 +38,7 @@
 ;; * Customization
 
 ;; TODO add customization if needed.
-;; (defgroup {{{pkg-name}}} nil
+;; (defgroup pkg-name nil
 ;;   "TODO"
 ;;   :group 'convenience)
 
@@ -55,5 +55,5 @@
 
 ;; * Footer
 
-(provide '{{{pgk-name}}})
-;;; {{{pgk-name}}}.el ends here
+(provide 'pkg-name)
+;;; pkg-name.el ends here

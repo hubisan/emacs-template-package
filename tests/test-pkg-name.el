@@ -1,4 +1,4 @@
-;;; test-{{{pgk-name}}}.el --- Tests for {{{pgk-name}}} -*- lexical-binding:t -*-
+;;; test-pkg-name.el --- Tests for {{{pgk-name}}} -*- lexical-binding:t -*-
 
 ;; Package-Requires: ((buttercup))
 
@@ -14,7 +14,7 @@
 (require 'buttercup)
 (require 'ert)
 
-(require '{{{pgk-name}}})
+(require 'pkg-name)
 
 ;; * Helpers
 
@@ -24,6 +24,6 @@
   (it "contains a spec with an expectation"
     (expect t :to-be t)))
 
-(provide 'test-{{{pgk-name}}})
+(provide 'test-pkg-name)
 
-;;; test-{{{pgk-name}}}.el ends here
+;;; test-pkg-name.el ends here

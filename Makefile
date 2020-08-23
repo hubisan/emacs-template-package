@@ -54,3 +54,15 @@ endif
 .DEFAULT: init
 init:
 	@./makem.sh $(DEBUG) $(VERBOSE) $(SANDBOX) $(INSTALL_DEPS) $(INSTALL_LINTERS)
+
+test-local-build-sandbox:
+	@./makem.sh --sandbox=.sandbox --install-deps --install-linters
+
+clean:
+	clean-elc clean-sandbox
+
+clean-elc:
+	find . -name \*.elc -type f -delete
+
+clean-sandbox:
+	rm -rf .sandbox
