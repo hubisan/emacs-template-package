@@ -54,7 +54,6 @@
   /* Footer color shades */
   --md-footer-bg-color:                hsla(var(--md-hue), 10%, 12%, 0.87);
   --md-footer-bg-color--dark:          hsla(var(--md-hue), 10%, 10%, 1);
-
 }
 
 /* Headings */
@@ -100,4 +99,21 @@
 {
   border-radius: 2px;
   background-color: var(--my-a-active-bgc);
+}
+
+.md-nav__item .md-nav__link--active {
+  color: var(--my-a-color);
+}
+
+.md-nav__item .md-nav__link:hover,
+.md-nav__item .md-nav__link:focus,
+.md-nav__item .md-nav__link:active,
+.md-nav__item .md-nav__link--active:hover,
+.md-nav__item .md-nav__link--active:focus,
+.md-nav__item .md-nav__link--active:active,
+.md-nav--primary .md-nav__item--active > .md-nav__link:hover,
+.md-nav--primary .md-nav__item--active > .md-nav__link:focus,
+.md-nav--primary .md-nav__item--active > .md-nav__link:active
+{
+  color: var(--my-a-hover-color);
 }
