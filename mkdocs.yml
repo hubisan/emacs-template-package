@@ -31,13 +31,13 @@ theme:
     #- tabs
     #- instant
     palette:
-        scheme: slate
-        primary: deep purple
-        accent: deep purple
+        scheme: emacs
+        primary: emacs
+        accent: emacs
     font:
         text: Roboto
         code: Roboto Mono
-    favicon: assets/images/favicon.png
+    favicon: favicon.png
     logo: img/logo.svg
 
 # Customization
