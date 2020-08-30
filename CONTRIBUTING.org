@@ -37,48 +37,33 @@ the Makefile targets or call makem.sh directly. To run Emacs with an empty
 configuration and not use your local emacs configuration it is best to use the
 sandbox mechanism provided by makem.sh.
 
-#+BEGIN_SRC shell :file lsp.sh
-  # Create the permanent sandbox. The directory is ignored in .gitignore.
-  # The sandbox directory can be deleted and build again if needed.
-  make sandbox=.sandbox install-deps=t install-linters=t
+For convenience there are some additional make targets for linting and testing.
+The main targets are (run in shell for example with ~make sandbox-build~):
 
-  # Run all rules in the sandbox.
-  make sandbox=.sandbox all
-  make sandbox=.sandbox v=v all  # To increase verbosity.
-  make sandbox=.sandbox v=vv all # To increase verbosity even more.
+- ~sandbox-build~ :: Creates the ~.sandbox~ directory and installs
+  the dependencies and linters in the sandbox.
+- ~sandbox-clean~ :: Removes the ~.sandbox~ directory.
+- ~sandbox-all~ :: Run the tests and lint the package in the sandbox.
+- ~sandbox-lint~ :: Lint in the sandbox.
+- ~sandbox-test~ :: Run the tests in the sandbox.
+- ~sandbox-interactive~ :: Load the packages in the sandbox and launch Emacs
+  (GUI).
 
-  # Run all lints.
-  make sandbox=.sandbox lint
+There are additional targets for linting:
 
-  # Run all tests.
-  make sandbox=.sandbox test
-
-  # Use makem.sh for linting
-
-  ./makem.sh --sandbox=.sandbox lint          # All
-  ./makem.sh --sandbox=.sandbox lint-checkdoc # Run checkdoc.
-  ./makem.sh --sandbox=.sandbox lint-compile  # Byte-compile source files with warnings as errors.
-  ./makem.sh --sandbox=.sandbox lint-declare  # Run check-declare.
-  ./makem.sh --sandbox=.sandbox lint-elsa     # Run Elsa (not included in "lint" rule).
-  ./makem.sh --sandbox=.sandbox lint-indent   # Lint indentation.
-  ./makem.sh --sandbox=.sandbox lint-package  # Run package-lint.
-  ./makem.sh --sandbox=.sandbox lint-regexps  # Run relint.
-
-  # Use makem.sh for running tests
-
-  ./makem.sh --sandbox=.sandbox test
-
-  # Use makem.sh to setup and load everything and then launch Emacs
-
-  ./makem.sh --sandbox=.sandbox interactive
-#+END_SRC
-
-Check [[https://github.com/alphapapa/makem.sh][makem.sh]] for more.
+- ~sandbox-lint-checkdoc~ :: Run checkdoc. Checks for style errors.
+- ~sandbox-lint-compile~ :: Byte-compile source files with warnings as errors.
+- ~sandbox-lint-declare~ :: Run check-declare.
+- ~sandbox-lint-elsa~ :: Run Elsa (not included in "lint" rule).
+- ~sandbox-lint-indent~ :: Lint indentation.
+- ~sandbox-lint-package~ :: Run package-lint, a linting library for elisp
+  package metadata.
+- ~sandbox-lint-regexps~ :: Relint scans elisp files for mistakes in regexps.
 
 ** Documentation
 
-The documentation is automatically build and pushed to the gh-pages branch with
-[[https://squidfunk.github.io/mkdocs-material/][mkdocs-material]] and a GitHub Action if the master branch is updated.
+The documentation is automatically build and pushed to the =gh-pages= branch
+with [[https://squidfunk.github.io/mkdocs-material/][mkdocs-material]] and a GitHub Action if the master branch is updated.
 
 To preview the documentation locally install the dependencies:
 

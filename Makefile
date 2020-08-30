@@ -55,14 +55,71 @@ endif
 init:
 	@./makem.sh $(DEBUG) $(VERBOSE) $(SANDBOX) $(INSTALL_DEPS) $(INSTALL_LINTERS)
 
-test-local-build-sandbox:
-	@./makem.sh --sandbox=.sandbox --install-deps --install-linters
+# ** Custom Rules
 
-clean:
-	clean-elc clean-sandbox
+# Added those rules for convenience.
 
+sandbox_dir = '.sandbox'
+
+# Create sandbox and install dependencies and linters.
+sandbox-build:
+	@./makem.sh --sandbox=$(sandbox_dir) --install-deps --install-linters
+	@echo Sandbox created successfully in $(sandbox_dir)  
+
+# Delete the sandbox directory.
+sandbox-clean:
+	@rm -rf $(sandbox_dir)
+	@echo Removed $(sandbox_dir)
+
+sandbox-rebuild: sandbox-clean sandbox-build
+	@echo Rebuilt sandbox successfully in $(sandbox_dir)  
+
+# Lint and run tests.
+sandbox-all: _sandbox-run-all clean-elc
+
+_sandbox-run-all:
+	@./makem.sh --sandbox=$(sandbox_dir) $(DEBUG) $(VERBOSE) all
+
+sandbox-lint: _sandbox-lint-all clean-elc
+
+# Lint in sandbox.
+_sandbox-lint-all:
+	@./makem.sh --sandbox=$(sandbox_dir) $(DEBUG) $(VERBOSE) lint
+
+sandbox-lint-checkdoc:
+	@./makem.sh --sandbox=$(sandbox_dir) $(DEBUG) $(VERBOSE) lint-checkdoc
+
+sandbox-lint-compile: _sandbox-lint-compile clean-elc
+
+_sandbox-lint-compile:
+	@./makem.sh --sandbox=$(sandbox_dir) $(DEBUG) $(VERBOSE) lint-compile
+
+sandbox-lint-declare:
+	@./makem.sh --sandbox=$(sandbox_dir) $(DEBUG) $(VERBOSE) lint-declare
+
+sandbox-lint-elsa:
+	@./makem.sh --sandbox=$(sandbox_dir) $(DEBUG) $(VERBOSE) lint-elsa
+
+sandbox-lint-indent:
+	@./makem.sh --sandbox=$(sandbox_dir) $(DEBUG) $(VERBOSE) lint-indent
+
+sandbox-lint-package:
+	@./makem.sh --sandbox=$(sandbox_dir) $(DEBUG) $(VERBOSE) lint-package
+
+sandbox-lint-regexps:
+	@./makem.sh --sandbox=$(sandbox_dir) $(DEBUG) $(VERBOSE) lint-regexps
+
+sandbox-test: _sandbox-test-all clean-elc
+
+# Test in sandbox.
+_sandbox-test-all:
+	@./makem.sh --sandbox=$(sandbox_dir) $(DEBUG) $(VERBOSE) test
+
+# Launch Emacs with only stuff loaded from the sandbox.
+sandbox-interactive:
+	@./makem.sh --sandbox=$(sandbox_dir) $(DEBUG) $(VERBOSE) interactive
+
+# Delete the elc-files and the .sandbox directory.
 clean-elc:
-	find . -name \*.elc -type f -delete
-
-clean-sandbox:
-	rm -rf .sandbox
+	@find . -name \*.elc -type f -delete
+	@echo Removed all elc files
