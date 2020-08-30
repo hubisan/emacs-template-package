@@ -81,11 +81,11 @@ title: Lorem ipsum dolor sit amet
 ---
 ```
 
-### Toc
+#### Toc
 
 Used to make a table of contents and to add permalinks to headings.
 
-### Smartypants
+#### Smartypants
 
 The SmartyPants extension converts ASCII dashes, quotes and ellipses to their
 HTML entity equivalents:
@@ -95,11 +95,11 @@ HTML entity equivalents:
 'test'
 <<test>>
 
-## PyMdown Extensions
+### PyMdown Extensions
 
 Showcase for enabled PyMdown [extensions](https://facelessuser.github.io/pymdown-extensions/).
 
-### Details
+#### Details
 
 Collapsible elements that hide their content. See [#admonition](#admonition) for
 valid classes, it is actually the same just collapsible.
@@ -128,11 +128,11 @@ valid classes, it is actually the same just collapsible.
 ??? warning classes
     Content.
 
-### Highlight
+#### Highlight
 
 Highlight is an extension that adds support for code highlighting.
 
-### Inlinehilite
+#### Inlinehilite
 
 ``` markdown
 Here is some code `#!py3 import pymdownx; pymdownx.__version__`.  
@@ -142,7 +142,7 @@ The mock shebang will be treated like text here: `#!js var test = 0;`.
 Here is some code `#!py3 import pymdownx; pymdownx.__version__`.  
 The mock shebang will be treated like text here: `#!js var test = 0;`.
 
-### Magiclink
+#### Magiclink
 
 Makes it easy to set links and converts them:
 
@@ -174,24 +174,24 @@ gitlab:pycqa/flake8!213
 @facelessuser  
 @twitter:twitter  
 
-### Saneheaders
+#### Saneheaders
 
 Used to make headers without a space not be headers:
 
 ##test
 
-### Smartsymbols
+#### Smartsymbols
 
 SmartSymbols adds syntax for creating special characters such as trademarks,
 arrows, fractions, etc.
 
 --> 1/4 (c)
 
-### Snippets
+#### Snippets
 
 Lets you include other files.
 
-### Superfences
+#### Superfences
 
 Allowing the nesting of fences under blockquotes, lists, or other block elements
 (see Limitations for more info). Ability to specify custom fences to provide
@@ -208,7 +208,8 @@ by default).
 ```{.python .extra-class linenums="1"}
 import hello_world
 ```
-### Tabbed
+
+#### Tabbed
 
 ``` markdown
 === "Tab 1"
@@ -237,7 +238,7 @@ import hello_world
     - list item a
     - list item b
     
-### Tasklist 
+#### Tasklist
 
 ``` markdown
 - [X] item 1
@@ -262,5 +263,3 @@ import hello_world
     * [X] item C
 - [ ] item 2
 - [ ] item 3
-
-
