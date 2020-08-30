@@ -1,0 +1,31 @@
+#+TITLE: TODOS
+
+* TODO Update Github [0/4]
+** TODO Update Description
+** TODO Update Link to Documentation in Description
+** TODO Turn on GitHub Pages
+Not sure if this is needed or done automatically.
+** TODO Disable Features
+Disable or enable features in GitHub Settings > Options (Wikis, Projects,
+
+* TODO Update README.org [0/4]
+** TODO Description
+Add short description below top heading.
+** TODO Update Main Features
+** TODO Installation
+Remove unused onces or add your own. Update the installation.
+** TODO Usage [0/2]
+Describe how the package is used.
+*** TODO Customization [0/2]
+**** TODO Variables
+Add and describe.
+**** TODO Faces
+Add and describe.
+*** TODO Key Bindings
+Add and describe.
+
+* TODO Changelog
+Update the changelog.
+
+* TODO Documentation
+Update the documentation. Most stuff can probably be copied from README.org.

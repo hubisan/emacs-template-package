@@ -2,22 +2,9 @@
 
 [[https://www.gnu.org/licenses/gpl-3.0][https://img.shields.io/badge/License-GPL%20v3-blue.svg]]
 
-** TODO Update stuff
+<description>
 
-Delete this entry once done.
-
-- [ ] Description of what this package is doing to the top below the license
-  svg. Add a screenshot or gif if this shows what the packages does quickly.
-
-*** TODO Update Github
-
-- [ ] Update GitHub description.
-- [ ] If documentation > add link to documentation in GitHub description
-- [ ] If documentation > turn on github pages (if needed)
-- [ ] Disable or enable features in GitHub Settings > Options (Wikis, Projects,
-  ...)
-
-** TODO Main features                                           :noexport_0:
+** Main features                                                :noexport_0:
 
 - description of feature 1
 - description of Feature 2
@@ -29,16 +16,14 @@ Delete this entry once done.
 
 - [[#installation][Installation]]
 - [[#usage][Usage]]
-- [[#customization][Customization]]
-- [[#key-bindings][Key Bindings]]
+  - [[#customization][Customization]]
+  - [[#key-bindings][Key Bindings]]
 - [[#changelog][Changelog]]
 - [[#contributing][Contributing]]
 
-** TODO Installation
+** Installation
 
-<TODO remove unused ones and if only 1 promote the content and remove the heading>
-
-*** TODO From Melpa
+*** From Melpa
 
 Install the package from MELPA with for instance [[https://github.com/jwiegley/use-package][use-package]]:
 
@@ -54,7 +39,7 @@ Install the package from MELPA with for instance [[https://github.com/jwiegley/u
      ))
 #+END_SRC
 
-*** TODO From Github
+*** From Github
 
 You can install the package from github with for instance [[https://github.com/jwiegley/use-package][use-package]], [[https://github.com/quelpa/quelpa][quelpa]]
 and [[https://github.com/quelpa/quelpa-use-package][quelpa-use-package]] as follows:
@@ -72,15 +57,15 @@ and [[https://github.com/quelpa/quelpa-use-package][quelpa-use-package]] as foll
      ))
 #+END_SRC
 
-** TODO Usage
+** Usage
 
-<TODO describe how this package is used>
+<Usage description>
 
 Check out the documentation at {{{docu-url}}}.
 
-** TODO Customization
+*** Customization
 
-*** TODO Variables
+**** Variables
 
 Set the following variables to change the behaviour of the package:
 
@@ -88,7 +73,7 @@ Set the following variables to change the behaviour of the package:
 |----------+---------+-------------|
 |          |         |             |
 
-*** TODO Faces
+**** Faces
 
 The following faces are defined:
 
@@ -97,7 +82,7 @@ The following faces are defined:
 |      |             |
 |      |             |
 
-** TODO Key Bindings
+*** Key Bindings
 
 <whatever needs to be said about that>
 
@@ -105,7 +90,7 @@ The following faces are defined:
 |-----+--------+-------------|
 |     |        |             |
 
-*** TODO Hydra
+**** Hydra
 
 <if there is any hydra>
 
@@ -116,6 +101,7 @@ See the [[file:CHANGELOG.org][changelog]].
 ** Contributing
 
 Use the issue tracker to reports bugs, suggest improvements or propose new
-features. If you want to contribute please open a pull request.
+features. If you want to contribute please open a pull request after having
+opened a new issue.
 
 In any case please check out the [[file:CONTRIBUTING.org][contributing guidelines]] beforehand.
