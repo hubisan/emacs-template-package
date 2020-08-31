@@ -26,9 +26,12 @@ Remember to:
 
 ** Testing
 
-Uses [[https://github.com/alphapapa/makem.sh][makem.sh]] for linting and running the tests. The tests are written with
-[[https://github.com/jorgenschaefer/emacs-buttercup][buttercup]]. After pushing a GitHub action is triggerd to automatically lint and
-run tests. The outcome can be seen on the [[https://github.com/{{{owner}}}/{{{repo}}}/actions][Actions]] page.
+Uses [[https://github.com/alphapapa/makem.sh][makem.sh]] for linting and running
+the tests. The tests are written with
+[[https://github.com/jorgenschaefer/emacs-buttercup][buttercup]]. After pushing
+a GitHub action is triggered to automatically lint and run tests. The outcome
+can be seen on the
+[[https://github.com/{{{owner}}}/{{{repo}}}/actions][Actions]] page.
 
 *** Lint & run tests
 

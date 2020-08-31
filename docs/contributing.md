@@ -9,8 +9,7 @@ Make sure to:
 - Check that the issue has not already been reported.
 - Check that the issue is not part of an active pull request.
 
-
-# Pull Requests
+## Pull Requests
 
 Cool that you want to contribute your code :-)
 
@@ -18,21 +17,21 @@ Remember to:
 
 - Include only one feature in a pull request.
 - Open an issue and mention your planned pull request.
-- The tests must pass (see [[#Testing][Testing]]).
+- The tests must pass (see [Testing](#testing)).
 - Update [README.org](https://github.com/hubisan/emacs-template-package/blob/master/README.org) if needed.
-- Update the documentation if needed (see [[#Documentation][Documentation]])
+- Update the documentation if needed (see (Documentation)[#documentation])
 - Update [CHANGELOG.org](https://github.com/hubisan/emacs-template-package/blob/master/CHANGELOG.org).
 
-## Testing
+### Testing
 
 Uses [makem.sh](https://github.com/alphapapa/makem.sh) for linting and running
 the tests. The tests are written with
 [buttercup](https://github.com/jorgenschaefer/emacs-buttercup). After pushing a
-GitHub action is triggerd to automatically lint and run tests. The outcome can
+GitHub action is triggered to automatically lint and run tests. The outcome can
 be seen on the
 [Actions](https://github.com/hubisan/emacs-template-package/actions) page.
 
-### Lint & run tests
+#### Lint & run tests
 
 To lint the package and run the tests locally from the command line you can use
 the Makefile targets or call makem.sh directly. To run Emacs with an empty
@@ -42,6 +41,8 @@ sandbox mechanism provided by makem.sh.
 For convenience there are some additional make targets for linting and testing.
 The main targets are (run for instance `make sandbox-build`in shell):
 
+| Target                | Description                                                                                |
+|:----------------------|:-------------------------------------------------------------------------------------------|
 | `sandbox-build`       | Creates the `.sandbox` directory and installs the dependencies and linters in the sandbox. |
 | `sandbox-clean`       | Removes the `.sandbox` directory.                                                          |
 | `sandbox-all`         | Run the tests and lint the package in the sandbox.                                         |
@@ -51,6 +52,8 @@ The main targets are (run for instance `make sandbox-build`in shell):
 
 There are additional targets for linting:
 
+| Target                  | Description                                                    |
+|:------------------------|:---------------------------------------------------------------|
 | `sandbox-lint-checkdoc` | Run checkdoc. Checks for style errors.                         |
 | `sandbox-lint-compile`  | Byte-compile source files with warnings as errors.             |
 | `sandbox-lint-declare`  | Run check-declare.                                             |
@@ -59,9 +62,9 @@ There are additional targets for linting:
 | `sandbox-lint-package`  | Run package-lint, a linting library for elisp package metadata |
 | `sandbox-lint-regexps`  | Relint scans elisp files for mistakes in regexps.              |
 
-## Documentation
+### Documentation
 
-The documentation is automatically build and pushed to the `gh-pages` branch
+The documentation is automatically built and pushed to the `gh-pages` branch
 with [mkdocs-material](https://squidfunk.github.io/mkdocs-material/) and a
 GitHub Action when the master branch is updated.
 
@@ -84,9 +87,9 @@ The files to build the documentation are stored in the
 folder.
 
 This documentation usually has more details than the short documentation in the
-[README.org](https://github.com/hubisan/emacs-template-package/blob/master/README.md).
+[README.org](https://github.com/hubisan/emacs-template-package/blob/master/README.org).
 
-### Taking Svg-Screenshots
+#### Taking Svg-Screenshots
 
 If you have build Emacs with Cairo support (check variable
 `system-configuration-features`) you can take vector screenshots of your Emacs
