@@ -60,7 +60,7 @@ There are additional targets for linting:
 ** Documentation
 
 The documentation is automatically build and pushed to the =gh-pages= branch
-with [[https://squidfunk.github.io/mkdocs-material/][mkdocs-material]] and a GitHub Action if the master branch is updated.
+with [[https://squidfunk.github.io/mkdocs-material/][mkdocs-material]] and a GitHub Action when the master branch is updated.
 
 To preview the documentation locally install the dependencies:
 
@@ -74,5 +74,28 @@ Then run a local server with ~mkdocs serve~ at http://localhost:8000/. The
 documentation will be built and live reloading is started. Upon any changes the
 documentation is automatically rebuilt and the page is reloaded.
 
-The settings for the documentation can be found in [[mkdocs.yml]]. The files are
-stored in the [[docs]] folder.
+The settings for the documentation can be found in [[mkdocs.yml]]. The files to
+build the documentation are stored in the [[docs]] folder.
+
+This documentation usually has more details than the short documentation in the
+[[README.org]].
+
+*** Taking Svg-Screenshots
+
+If you have build Emacs with Cairo support (check variable
+~system-configuration-features~) you can take vector screenshots of your Emacs
+to use for the documentation. The Cairo flag is not on by default when building
+from source.
+
+#+BEGIN_SRC emacs-lisp
+  (defun my-emacs-screenshot-svg ()
+      "Save a screenshot of the current frame as an SVG image.
+    Saves to a temp file and puts the filename in the kill ring."
+      (interactive)
+      (let* ((filename (make-temp-file "emacs-screenshot" nil ".svg"))
+             (data (x-export-frames nil 'svg)))
+        (with-temp-file filename
+          (insert data))
+        (kill-new filename)
+        (message filename)))
+#+END_SRC
