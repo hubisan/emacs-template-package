@@ -89,7 +89,7 @@ nav:
     - Overview: index.md
     - Installation: installation.md
     - Usage: usage.md
-    - Customization: customization.md
-    - Key Bindings: key-bindings.md
+    # - Customization: customization.md
+    # - Key Bindings: key-bindings.md
     - Changelog: changelog.md
     - Contributing: contributing.md
