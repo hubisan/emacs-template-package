@@ -7,7 +7,7 @@ make a new issue.
 
 Make sure to:
 
-- Check that the issue has not already been reported.
+- Check that the issue has not already been reported (open and closed ones).
 - Check that the issue is not part of an active pull request.
 
 ## Pull Requests
@@ -66,9 +66,8 @@ separately (those linters except `elsa` are all run with `sandbox-lint`):
 | `sandbox-lint-package`  | Run package-lint, a linting library for elisp package metadata |
 | `sandbox-lint-regexps`  | Relint scans elisp files for mistakes in regexps.              |
 
-
 To increase the verbosity add `v=v` or `v=vv` before or after the target like
-`make v=vv sandbox-all`
+`make v=vv sandbox-all`.
 
 ### Documentation
 
@@ -76,6 +75,25 @@ The files to build the documentation are stored in the
 [docs](https://github.com/hubisan/emacs-template-package/blob/master/docs)
 folder. The settings for the documentation can be found in
 [mkdocs.yml](https://github.com/hubisan/emacs-template-package/blob/master/mkdocs.yml).
+
+#### Files
+
+The documentation has the following files:
+
+- **index.md** 
+  The homepage of the package describe its purpose and includes a description of
+  the main features.
+- **installation.md** 
+  Instructions on how to install the package.
+- **usage.md**
+  Description on how to use the package including customization (variables and
+  faces) and key bindings.
+- **changelog.md** 
+  The changelog of the package.
+- **contributing.md** 
+  The rules for contributing.
+
+#### Building the Documentation
 
 The documentation is automatically built and pushed to the `gh-pages` branch
 with [mkdocs-material](https://squidfunk.github.io/mkdocs-material/) and a

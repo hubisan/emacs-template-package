@@ -4,11 +4,11 @@
 
 * Bugs, Improvements and new Features
 
-Go to [[https://github.com/{{{owner}}}/{{{repo}}}/issues][Issues]] and make a new issue.
+Go to [[https://github.com/hubisan/emacs-template-package/issues][Issues]] and make a new issue.
 
 Make sure to:
 
-- Check that the issue has not already been reported.
+- Check that the issue has not already been reported (open and closed ones).
 - Check that the issue is not part of an active pull request.
 
 * Pull Requests
@@ -21,7 +21,7 @@ Remember to:
 - Open an issue and mention your planned pull request.
 - The tests must pass (see [[#testing][Testing]]).
 - Update [[README.org]] if needed.
-- Update the documentation if needed (see [[#Documentation][Documentation]])
+- Update the documentation if needed (see [[#documentation][Documentation]])
 - Update [[CHANGELOG.org]].
 
 ** Testing
@@ -31,7 +31,7 @@ the tests. The tests are written with
 [[https://github.com/jorgenschaefer/emacs-buttercup][buttercup]]. After pushing
 a GitHub action is triggered to automatically lint and run tests. The outcome
 can be seen on the
-[[https://github.com/{{{owner}}}/{{{repo}}}/actions][Actions]] page.
+[[https://github.com/hubisan/emacs-template-package/actions][Actions]] page.
 
 *** Lint & run tests
 
@@ -41,16 +41,19 @@ configuration and not use your local emacs configuration it is best to use the
 sandbox mechanism provided by makem.sh.
 
 For convenience there are some additional make targets for linting and testing.
-The main targets are (run in shell e.g. ~make sandbox-build~):
+Make sure to build the sandbox before running the tests and to rebuild it if the
+dependencies or the emacs version have changed. The main targets are:
 
 | ~sandbox-build~       | Creates the ~.sandbox~ directory and installs the dependencies and linters in the sandbox. |
 | ~sandbox-clean~       | Removes the ~.sandbox~ directory.                                                          |
+| ~sandbox-rebuild~     | Runs `sandbox-clean` and then `sandbox-build`.                                             |
 | ~sandbox-all~         | Run the tests and lint the package in the sandbox.                                         |
 | ~sandbox-lint~        | Lint in the sandbox.                                                                       |
 | ~sandbox-test~        | Run the tests in the sandbox.                                                              |
 | ~sandbox-interactive~ | Load the packages in the sandbox and launch Emacs (GUI).                                   |
 
-There are additional targets for linting:
+There are additional targets for linting to be able to call the linters
+separately (those linters except `elsa` are all run with `sandbox-lint`):
 
 | ~sandbox-lint-checkdoc~ | Run checkdoc. Checks for style errors.                         |
 | ~sandbox-lint-compile~  | Byte-compile source files with warnings as errors.             |
@@ -60,10 +63,31 @@ There are additional targets for linting:
 | ~sandbox-lint-package~  | Run package-lint, a linting library for elisp package metadata |
 | ~sandbox-lint-regexps~  | Relint scans elisp files for mistakes in regexps.              |
 
+To increase the verbosity add ~v=v~ or ~v=vv~ before or after the target like
+~make v=vv sandbox-all~.
+
 ** Documentation
 
+The files to build the documentation are stored in the [[docs]] folder. The
+settings for the documentation can be found in [[mkdocs.yml]].
+
+*** Files
+
+The documentation has the following files:
+
+- index.md :: The homepage of the package describe its purpose and includes a
+  description of the main features.
+- installation.md :: Instructions on how to install the package.
+- usage.md :: Description on how to use the package including customization
+  (variables and faces) and key bindings.
+- changelog.md :: The changelog of the package.
+- contributing.md :: THe rules for contributing.
+
+*** Building the Documentation
+
 The documentation is automatically build and pushed to the =gh-pages= branch
-with [[https://squidfunk.github.io/mkdocs-material/][mkdocs-material]] and a GitHub Action when the master branch is updated.
+with [[https://squidfunk.github.io/mkdocs-material/][mkdocs-material]] and a
+GitHub Action when the master branch is updated.
 
 To preview the documentation locally install the dependencies:
 
@@ -76,12 +100,6 @@ To preview the documentation locally install the dependencies:
 Then run a local server with ~mkdocs serve~ at http://localhost:8000/. The
 documentation will be built and live reloading is started. Upon any changes the
 documentation is automatically rebuilt and the page is reloaded.
-
-The settings for the documentation can be found in [[mkdocs.yml]]. The files to
-build the documentation are stored in the [[docs]] folder.
-
-This documentation usually has more details than the short documentation in the
-[[README.org]].
 
 *** Taking Svg-Screenshots
 
