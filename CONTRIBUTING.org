@@ -44,24 +44,24 @@ For convenience there are some additional make targets for linting and testing.
 Make sure to build the sandbox before running the tests and to rebuild it if the
 dependencies or the emacs version have changed. The main targets are:
 
-| ~sandbox-build~       | Creates the ~.sandbox~ directory and installs the dependencies and linters in the sandbox. |
-| ~sandbox-clean~       | Removes the ~.sandbox~ directory.                                                          |
-| ~sandbox-rebuild~     | Runs `sandbox-clean` and then `sandbox-build`.                                             |
-| ~sandbox-all~         | Run the tests and lint the package in the sandbox.                                         |
-| ~sandbox-lint~        | Lint in the sandbox.                                                                       |
-| ~sandbox-test~        | Run the tests in the sandbox.                                                              |
-| ~sandbox-interactive~ | Load the packages in the sandbox and launch Emacs (GUI).                                   |
+| sandbox-build       | Creates the sandbox directory and installs the dependencies and linters in the sandbox. |
+| sandbox-clean       | Removes the sandbox directory.                                                          |
+| sandbox-rebuild     | Runs ~sandbox-clean~ and then ~sandbox-build~.                                          |
+| sandbox-all         | Run the tests and lint the package in the sandbox.                                      |
+| sandbox-lint        | Lint in the sandbox.                                                                    |
+| sandbox-test        | Run the tests in the sandbox.                                                           |
+| sandbox-interactive | Load the packages in the sandbox and launch Emacs (GUI).                                |
 
 There are additional targets for linting to be able to call the linters
-separately (those linters except `elsa` are all run with `sandbox-lint`):
+separately (those linters except ~elsa~ are all run with ~sandbox-lint~):
 
-| ~sandbox-lint-checkdoc~ | Run checkdoc. Checks for style errors.                         |
-| ~sandbox-lint-compile~  | Byte-compile source files with warnings as errors.             |
-| ~sandbox-lint-declare~  | Run check-declare.                                             |
-| ~sandbox-lint-elsa~     | Run Elsa (not included in "lint" rule).                        |
-| ~sandbox-lint-indent~   | Lint indentation.                                              |
-| ~sandbox-lint-package~  | Run package-lint, a linting library for elisp package metadata |
-| ~sandbox-lint-regexps~  | Relint scans elisp files for mistakes in regexps.              |
+| sandbox-lint-checkdoc | Run checkdoc. Checks for style errors.                         |
+| sandbox-lint-compile  | Byte-compile source files with warnings as errors.             |
+| sandbox-lint-declare  | Run check-declare.                                             |
+| sandbox-lint-elsa     | Run Elsa (not included in "lint" rule).                        |
+| sandbox-lint-indent   | Lint indentation.                                              |
+| sandbox-lint-package  | Run package-lint, a linting library for elisp package metadata |
+| sandbox-lint-regexps  | Relint scans elisp files for mistakes in regexps.              |
 
 To increase the verbosity add ~v=v~ or ~v=vv~ before or after the target like
 ~make v=vv sandbox-all~.

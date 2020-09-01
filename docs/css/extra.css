@@ -158,5 +158,5 @@
 [data-md-color-scheme="emacs"] table:not([class]) th,
 [data-md-color-scheme="emacs"] table:not([class]) td
 {
-  padding: 6375em 1.25em;
+  padding: .6375em 1.25em;
 }
