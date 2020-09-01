@@ -80,18 +80,13 @@ folder. The settings for the documentation can be found in
 
 The documentation has the following files:
 
-- **index.md** 
-  The homepage of the package describe its purpose and includes a description of
-  the main features.
-- **installation.md** 
-  Instructions on how to install the package.
-- **usage.md**
-  Description on how to use the package including customization (variables and
-  faces) and key bindings.
-- **changelog.md** 
-  The changelog of the package.
-- **contributing.md** 
-  The rules for contributing.
+| File            | Content                                                                                               |
+|:----------------|:------------------------------------------------------------------------------------------------------|
+| index.md        | The homepage of the package describe its purpose and includes a description of the main features.     |
+| installation.md | Instructions on how to install the package.                                                           |
+| usage.md        | Description on how to use the package including customization (variables and faces) and key bindings. |
+| changelog.md    | The changelog of the package.                                                                         |
+| contributing.md | The guidelines for contributing.                                                                      |
 
 #### Building the Documentation
 
