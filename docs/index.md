@@ -21,12 +21,21 @@ enabled ones.
 #### Admonition
 
 You can use the following classes including synonyms:
-- note, seealso
-- important, hint, tip
-- warning, caution, attention
-- danger, error
 
-``` markdown
+- note, seealso
+- abstract, summary, tldr
+- info, todo
+- tip, hint, important
+- success, check, done
+- question, help, faq
+- warning, caution, attention
+- failure, fail, missing
+- danger, error
+- bug
+- example
+- quote, cite
+
+```markdown
 !!! danger "Don't try this at home"
     ...
 ```
@@ -53,13 +62,14 @@ Apple
 :   Pomaceous fruit of plants of the genus Malus in
     the family Rosaceae.
 ```
+
 Apple
 :   Pomaceous fruit of plants of the genus Malus in
     the family Rosaceae.
 
 #### Footnotes
 
-``` markdown
+```markdown
 Footnotes[^1] have a label[^@#$%] and the footnote's content.
 
 [^1]: This is a footnote content.
@@ -73,7 +83,7 @@ Footnotes[^1] have a label[^@#$%] and the footnote's content.
 
 #### Meta
 
-Overwrite the title with front matter at top:
+Overwrite the page title with front matter at top:
 
 ``` markdown
 ---
@@ -83,12 +93,19 @@ title: Lorem ipsum dolor sit amet
 
 #### Toc
 
-Used to make a table of contents and to add permalinks to headings.
+Is used to make a table of contents and to add permalinks to headings.
 
 #### Smartypants
 
 The SmartyPants extension converts ASCII dashes, quotes and ellipses to their
 HTML entity equivalents:
+
+```markdown
+...
+"test"
+'test'
+<<test>>
+```
 
 ...
 "test"
@@ -185,6 +202,10 @@ Used to make headers without a space not be headers:
 SmartSymbols adds syntax for creating special characters such as trademarks,
 arrows, fractions, etc.
 
+```markdown
+--> 1/4 (c)
+```
+
 --> 1/4 (c)
 
 #### Snippets
@@ -198,6 +219,18 @@ Allowing the nesting of fences under blockquotes, lists, or other block elements
 features like flowcharts, sequence diagrams, or other custom blocks. Allow
 disabling of indented code blocks in favor of only using the fenced variant (off
 by default).
+
+```markdown
+> ```
+  a fenced block
+
+> with blank lines
+  ```
+
+```{.python .extra-class linenums="1"}
+import hello_world
+```
+```
 
 > ```
   a fenced block
