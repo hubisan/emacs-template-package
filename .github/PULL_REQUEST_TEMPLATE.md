@@ -20,5 +20,6 @@
 ### Checklist
 
 - [ ] New and existing unit tests pass.
-- [ ] I have updated the documentation (if an update is needed).
-- [ ] I have updated the changelog.
+- [ ] The documentation is up to date.
+- [ ] The README.org is up to date.
+- [ ] The CHANGELOG.org is up to date.

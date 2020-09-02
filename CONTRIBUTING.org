@@ -19,6 +19,7 @@ Remember to:
 
 - Include only one feature in a pull request.
 - Open an issue and mention your planned pull request.
+- Add/update tests if needed.
 - The tests must pass (see [[#testing][Testing]]).
 - Update [[README.org]] if needed.
 - Update the documentation if needed (see [[#documentation][Documentation]])

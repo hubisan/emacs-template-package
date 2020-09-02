@@ -18,6 +18,7 @@ Remember to:
 
 - Include only one feature in a pull request.
 - Open an issue and mention/reference your planned pull request.
+- Add/update tests if needed.
 - The tests must pass (see [Testing](#testing)).
 - Update [README.org](https://github.com/hubisan/emacs-template-package/blob/master/README.org) if needed.
 - Update the documentation if needed (see [Documentation](#documentation))
