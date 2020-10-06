@@ -1,9 +1,10 @@
 ---
 name: Bug Report
 about: Report existings bugs.
-title: ""
-labels: "Bug"
-assignees: ""
+title: ''
+labels: ''
+assignees: ''
+
 ---
 
 <!-- Check that the issue has not already been reported. -->

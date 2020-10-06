@@ -1,9 +1,10 @@
 ---
 name: Feature Request
 about: Request new features and improvements.
-title: ""
-labels: "Enhancement"
-assignees: ""
+title: ''
+labels: ''
+assignees: ''
+
 ---
 
 <!-- Check if there is no similar feature request. -->
